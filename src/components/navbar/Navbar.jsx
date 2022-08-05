@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.png";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(() => false);
@@ -15,7 +16,10 @@ const Navbar = () => {
             <div className="container">
                 <div className="left">
                     <Link to="/" className="link">
-                        <img src="../../assets/images/logo.png" className="navIcon" alt="BroadwayCinema logo"/>
+                        <div className="navIconTitle">
+                            <img src={logo} className="navIcon" alt="BroadwayCinema logo" />
+                            <span className="navTitle">BROADWAY CINEMAS</span>
+                        </div>
                     </Link>
                 </div>
             </div>

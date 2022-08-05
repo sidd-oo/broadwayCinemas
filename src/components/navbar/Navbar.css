@@ -34,15 +34,26 @@
   align-items: center;
 }
 
+.navIconTitle{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
 
 .navIcon{
   padding: 5px;
-  width: 100px;
   height: 40px;
-  border: 2px white solid;
+  transform: rotate(-20deg);
 }
 
-.navIcon:hover{
+.navTitle{
+  padding: 4px;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+.navIconTitle:hover{
+  padding: 4px;
   transform:scale(1.1);
-  border: 2px white solid;
 }
