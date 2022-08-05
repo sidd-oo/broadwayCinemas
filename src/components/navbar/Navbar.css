@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@900&display=swap');
+
+.navbar {
+  width: 100%;
+  color:white;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background: rgb(27, 27, 34);
+}
+
+.navbar.scrolled {
+  background-color: rgb(49, 48, 48);
+}
+
+.container {
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 2px 50px 2px 50px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.navIcon{
+  padding: 5px;
+  width: 100px;
+  height: 40px;
+  border: 2px white solid;
+}
+
+.navIcon:hover{
+  transform:scale(1.1);
+  border: 2px white solid;
+}
