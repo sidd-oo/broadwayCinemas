@@ -1,0 +1,82 @@
+.movie {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+    margin-top: 40px;
+    color: rgb(66, 64, 64);
+    height: 80vh;
+    width: 80%;
+}
+
+.leftContainer {
+    flex: 1.5;
+    padding: 30px;
+}
+
+.rightContainer {
+    height: 100%;
+    flex: 3;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 30px;
+}
+
+.rightContainer-top {
+    flex: 1;
+    margin-bottom: 60px;
+}
+
+.rightContainer-bottom {
+    flex: 3;
+}
+
+.thumbnail-image {
+    width: 250px;
+}
+
+.backLink {
+    color: grey;
+    margin-bottom: 60px;
+    text-decoration: underline;
+}
+
+.title {
+    color: rgb(39, 38, 38);
+    margin-bottom: 10px;
+}
+
+.right-mid {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.right-mid>h2 {
+    margin-right: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.about-the-movie {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.desc {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.bookBtn {
+    margin-top: 30px;
+    width: 130px;
+    height: 50px;
+    color: white;
+    background-color: rgb(47, 71, 80);
+    border-radius: 4px;
+}
