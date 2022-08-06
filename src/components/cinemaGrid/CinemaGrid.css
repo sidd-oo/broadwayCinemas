@@ -48,7 +48,7 @@
     color: white;
     align-items: center;
     justify-content: center;
-    height: 70vh;
+    height: 55vh;
 }
 
 .marking.number {
@@ -84,6 +84,10 @@
     background-color: white;
 }
 
+.seat:hover{
+    background-color: rgb(57, 219, 57);;
+}
+
 .seat.selected {
     background-color: rgb(57, 219, 57);
 }
@@ -92,11 +96,12 @@
     background-color: rgb(209, 206, 206);
 }
 
-.seat:nth-of-type(2) {
+.seat:nth-of-type(4),.marking.number:nth-of-type(4) {
     margin-right: 18px;
 }
 
-.seat:nth-last-of-type(3) {
+
+.seat:nth-last-of-type(3), .marking.number:nth-last-of-type(3) {
     margin-left: 18px;
 }
 
@@ -120,10 +125,6 @@
     border: 1px solid black;
 }
 
-.showcase .seat:not(.sold):hover {
-    cursor: default;
-    transform: scale(1);
-}
 
 .showcase {
     background-color: rgba(0, 0, 0, 0.1);
@@ -187,6 +188,28 @@
     margin-right: 100px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+}
+
+.bookingInfo{
+    color: rgb(75, 71, 71);
+    margin-left: 100px;
+}
+
+#movieTitle{
+    color:rgb(68, 66, 66);
+    font-size: 35px; 
+}
+
+#ageCertificate{
+    color:#777;
+    font-size: 25px; 
+    font-weight: 400;
+}
+
+#show-schedule{
+    color:rgb(88, 87, 87);
+    font-size: 15px;
+    font-weight: 300;
 }

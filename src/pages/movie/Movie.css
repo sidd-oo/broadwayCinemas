@@ -45,7 +45,7 @@
 }
 
 .title {
-    color: rgb(39, 38, 38);
+    color: rgb(63, 62, 62);
     margin-bottom: 10px;
 }
 
@@ -58,18 +58,20 @@
 
 .right-mid>h2 {
     margin-right: 15px;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 15px;
+    color: rgb(85, 84, 84);
 }
 
 .about-the-movie {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .desc {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(85, 84, 84);
 }
 
 .genre {
@@ -93,10 +95,4 @@
 .bookBtn:hover {
     background-color: rgb(94, 179, 179);
     transform: scale(1.1);
-}
-
-.cinemaGrid-bottom-end {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
 }

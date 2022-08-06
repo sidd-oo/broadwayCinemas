@@ -1,14 +1,14 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import Navbar from '../../components/navbar/Navbar'
 import "./Movie.css";
 import movieData from "../../data/movies.json"
-import { MovieRounded } from '@mui/icons-material';
 
 const Movie = () => {
     const location = useLocation();
     const movieIndex = parseInt(location.pathname.split("/")[2]);
     const movie = movieData.movies[movieIndex];
+    const navigate = useNavigate();
 
     return (
         <>
@@ -32,18 +32,20 @@ const Movie = () => {
 
                             {movie.genres.map((genre, i) => {
                                 return <>
-                                {i === 0 ?
-                                    (<h3 className="genre" key={i}>&#8226;{genre}</h3>) : (<h3 className="genre" key={i}>{genre}</h3>)
-                                } 
+                                    {i === 0 ?
+                                        (<h3 className="genre" key={i}>&#8226;{genre}</h3>) : (<h3 className="genre" key={i}>{genre}</h3>)
+                                    }
                                 </>
                             })}
                             <h2>&#8226;{movie.ageCertificate}</h2>
                         </div>
                         <h3 className="about-the-movie">About the movie</h3>
                         <h2 className="desc">{movie.description}</h2>
-                        <Link to="/bookTicket">
-                            <button className="bookBtn">Book Now!</button>
-                        </Link>
+                        <div>
+                            <button className="bookBtn" onClick={() => { navigate("/bookTicket", { state: movie }) }}>
+                                Book Now!
+                            </button>
+                        </div>
                     </div>
 
                 </div>
