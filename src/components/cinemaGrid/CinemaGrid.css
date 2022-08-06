@@ -1,0 +1,192 @@
+.cinemaGrid {
+    margin: 100px 30px;
+}
+
+.cinemaGrid-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cinemaGrid-top-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.timeBtnContainer {
+    display: flex;
+    margin-top: 20px;
+}
+
+.timeBtn {
+    background-color: teal;
+    border: 1px solid black;
+    color: white;
+    margin-right: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.timeBtn:hover {
+    background-color: rgb(94, 179, 179);
+    transform: scale(1.1);
+}
+
+.cinemaGrid-top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cinemaGrid-bottom {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.marking.number {
+    height: 24px;
+    width: 24px;
+    margin: 3px;
+    color: green;
+    font-weight: 500;
+}
+
+.marking.alphabet {
+    height: 24px;
+    width: 24px;
+    margin: 3px;
+    color: green;
+    font-weight: 500;
+}
+
+.seat-container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.seat {
+    height: 20px;
+    width: 24px;
+    margin: 3px;
+    border: 1px solid green;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: white;
+}
+
+.seat.selected {
+    background-color: rgb(57, 219, 57);
+}
+
+.seat.sold {
+    background-color: rgb(209, 206, 206);
+}
+
+.seat:nth-of-type(2) {
+    margin-right: 18px;
+}
+
+.seat:nth-last-of-type(3) {
+    margin-left: 18px;
+}
+
+.marking.alphabet:nth-last-of-type(1) {
+    margin-right: 18px;
+}
+
+.seat:not(.sold):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    border: 1px solid black;
+}
+
+.seat.sold {
+    border: 1px solid black;
+}
+
+.seat.sold:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    border: 1px solid black;
+}
+
+.showcase .seat:not(.sold):hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.showcase {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px 10px;
+    margin: 40px 0px;
+    border-radius: 5px;
+    color: #777;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.showcase li small {
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+}
+
+.screen {
+    background-color: #fff;
+    height: 20px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(45deg);
+    box-shadow: 5px -10px 10px rgba(116, 117, 114, 0.75);
+    border: 1px solid green;
+}
+
+.cinemaGrid-bottom-end{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.submitBtn {
+    background-color: red;
+    border: 1px solid black;
+    color: white;
+    margin-right: 10px;
+    width: 130px;
+    height: 35px;
+    border-radius: 3px;
+}
+
+.submitBtn:hover {
+    background-color: rgb(214, 72, 72);
+    transform: scale(1.1);
+}
+
+.cinemaGrid-bottom-end{
+    width: 100vw;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}

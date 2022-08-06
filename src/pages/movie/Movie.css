@@ -72,7 +72,7 @@
     font-weight: 500;
 }
 
-.genre{
+.genre {
     margin-right: 10px;
     font-size: 17px;
     font-weight: 500;
@@ -80,10 +80,23 @@
 }
 
 .bookBtn {
-    margin-top: 30px;
-    width: 130px;
-    height: 50px;
+    background-color: teal;
+    border: 1px solid black;
     color: white;
-    background-color: rgb(47, 71, 80);
-    border-radius: 4px;
+    margin-top: 30px;
+    margin-right: 10px;
+    width: 130px;
+    height: 35px;
+    border-radius: 3px;
+}
+
+.bookBtn:hover {
+    background-color: rgb(94, 179, 179);
+    transform: scale(1.1);
+}
+
+.cinemaGrid-bottom-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
