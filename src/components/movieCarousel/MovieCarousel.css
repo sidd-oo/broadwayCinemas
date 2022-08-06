@@ -1,0 +1,44 @@
+.movieCarousel {
+    width: 93%;
+    height: 80vh;
+    margin: 0 auto;
+    padding-top: 60px;
+
+}
+
+.leftArrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 1px;
+    font-size: 75px;
+    color: rgb(65, 62, 62);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.rightArrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 1px;
+    font-size: 75px;
+    color: rgb(65, 62, 62);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.dotSlider {
+    position: absolute;
+    bottom: 0%;
+    right:50%;
+    left: 50%;
+    display: flex;
+    justify-Content: center;
+    color: azure;
+}
+.dots {
+    margin: 0 3px;
+    cursor: pointer;
+    font-size: 20px;
+}
