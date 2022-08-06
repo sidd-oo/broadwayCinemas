@@ -28,13 +28,22 @@ const Movie = () => {
                     <div className="rightContainer-bottom">
                         <h1 className='title'>{movie.title.toUpperCase()}</h1>
                         <div className="right-mid">
-                            <h2>{movie.durationMins}</h2>
-                            <h2>Genre</h2>
-                            <h2>{movie.ageCertificate}</h2>
+                            <h2>&#8226;{movie.durationMins}</h2>
+
+                            {movie.genres.map((genre, i) => {
+                                return <>
+                                {i === 0 ?
+                                    (<h3 className="genre" key={i}>&#8226;{genre}</h3>) : (<h3 className="genre" key={i}>{genre}</h3>)
+                                } 
+                                </>
+                            })}
+                            <h2>&#8226;{movie.ageCertificate}</h2>
                         </div>
                         <h3 className="about-the-movie">About the movie</h3>
                         <h2 className="desc">{movie.description}</h2>
-                        <button className="bookBtn">Book Now!</button>
+                        <Link to="/bookTicket">
+                            <button className="bookBtn">Book Now!</button>
+                        </Link>
                     </div>
 
                 </div>

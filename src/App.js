@@ -6,6 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 import Movie from "./pages/movie/Movie";
+import TicketBooking from "./pages/ticketBooking/TicketBooking";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/movie/:id" element={<Movie/>}/>
-
+        <Route path="/bookTicket" element={<TicketBooking/>}/>
     </Routes>
     </BrowserRouter >
   );

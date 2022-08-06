@@ -72,6 +72,13 @@
     font-weight: 500;
 }
 
+.genre{
+    margin-right: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    display: inline-block;
+}
+
 .bookBtn {
     margin-top: 30px;
     width: 130px;
