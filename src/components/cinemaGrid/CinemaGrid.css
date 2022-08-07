@@ -169,7 +169,7 @@
 }
 
 .submitBtn {
-    background-color: red;
+    background-color: teal;
     border: 1px solid black;
     color: white;
     margin-right: 10px;
@@ -178,8 +178,12 @@
     border-radius: 3px;
 }
 
+.submitBtn:disabled{
+    background-color: red;
+}
+
 .submitBtn:hover {
-    background-color: rgb(214, 72, 72);
+    background-color: rgb(158, 14, 14);
     transform: scale(1.1);
 }
 
@@ -212,4 +216,8 @@
     color:rgb(88, 87, 87);
     font-size: 15px;
     font-weight: 300;
+}
+
+p{
+    display: inline-block;
 }
