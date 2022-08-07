@@ -24,7 +24,7 @@ const CinemaGrid = () => {
             setSeatState({ ...seatState, timeSlot: timeSlot, selectedSeats: selectedSeats });
         }
         updateState();
-    }, [timeSlot, selectedSeats, render]);
+    }, [timeSlot, selectedSeats]);
 
     const localStorageData = localStorage.getItem(`${movie.title}/${timeSlot}`) || null;
     useEffect(() => {
@@ -56,8 +56,7 @@ const CinemaGrid = () => {
         if(localStorageData === null){
             localStorage.setItem(`${seatState.movieName}/${seatState.timeSlot}`, JSON.stringify(seatState));
         }
-        setRender(!render);
-        alert(`Your selected seats, i.e ${selectedSeats} seats for a price of $${ticketPrice * countSelectedSeats} for the ${timeSlot} show is booked successfully. See you in Cinema!`);
+        alert(`Your selected seats are ${selectedSeats} seats for a price of $${ticketPrice * (countSelectedSeats+1)} for the ${timeSlot} show is booked successfully. See you in Cinema!`);
     }
 
     console.log(seatState);
@@ -120,14 +119,9 @@ const CinemaGrid = () => {
                 </div>
                 <div className="cinemaGrid-bottom-end">
                     <p className="bookingInfo">
-                        You have selected <span id="seatNumbers">{`${countSelectedSeats} seats, i.e `}{selectedSeats.map((seat, i) => {
+                        Your selected seats are <span>{selectedSeats.map((seat, i) => {
                             return (<span key={i}>{seat},</span>)
-                        })}</span> seats for a price of $<span id="total">{ticketPrice * countSelectedSeats}</span> for the <span id="timeSlot">{timeSlot}</span> show.
-                    </p>
-                    <p className="bookingInfo" style={{display:"none"}}>
-                        You have selected <span id="seatNumbers">{`${countSelectedSeats} seats, i.e `}{selectedSeats.map((seat, i) => {
-                            return (<span key={i}>{seat},</span>)
-                        })}</span> seats for a price of $<span id="total">{ticketPrice * countSelectedSeats}</span> for the <span id="timeSlot">{timeSlot}</span> show.
+                        })}</span> for the <span id="timeSlot">{timeSlot}</span> show.
                     </p>
                     <button className="submitBtn" disabled={countSelectedSeats === 0 ? "true" : (timeSlot === null ? true : false)} onClick={(e) => {
                         handleBook(e)
